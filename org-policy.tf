@@ -3,7 +3,7 @@
 *************************************************/
 
 module "organization_policies_type_boolean" {
-  source = "../gcp-org-policy"
+  source = "github.com/Coalfire-CF/ACE-GCP-Org-Policy"
 
   for_each = toset(var.boolean_type_organization_policies)
 

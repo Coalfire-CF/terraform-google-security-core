@@ -3,7 +3,7 @@
 *************************************************/
 
 module "gcs" {
-  source = "../gcp-cloud-storage"
+  source = "github.com/Coalfire-CF/ACE-GCP-Cloud-Storage"
 
   project_id = google_project.management.project_id
   names = [
