@@ -1,4 +1,6 @@
-# Google Cloud Bootstrap
+# Google Cloud Security Core Terraform Module
+
+## Description
 
 The purpose of this module is to help bootstrap a GCP organization, creating all the required GCP resources to start deploying the FedRAMP reference architecture. The bootstrap is a dependency for all other deployment components. This module will create:
 
@@ -9,6 +11,25 @@ The purpose of this module is to help bootstrap a GCP organization, creating all
 - Create an organization log sink and destination
 - Configure organization policies
 - Enable audit logging
+
+### Usage
+
+```
+module "bootstrap" {
+  source = "github.com/Coalfire-CF/ACE-GCP-Security-Core"
+
+  org_id           = var.org_id
+  aw_folder_id     = var.aw_folder_id
+  billing_account  = var.billing_account
+  group_org_admins = var.group_org_admins
+
+  management_services = var.management_services
+  networking_services = var.networking_services
+
+  region = var.region
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
