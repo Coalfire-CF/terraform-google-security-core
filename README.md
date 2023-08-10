@@ -49,7 +49,7 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/ACE-GCP-Log-Export-Pubsub | n/a |
+| <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/ACE-GCP-Log-Export/modules/pubsub | n/a |
 | <a name="module_gcs"></a> [gcs](#module\_gcs) | github.com/Coalfire-CF/ACE-GCP-Cloud-Storage | n/a |
 | <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/ACE-GCP-Cloud-KMS | n/a |
 | <a name="module_log_export"></a> [log\_export](#module\_log\_export) | github.com/Coalfire-CF/ACE-GCP-Log-Export | n/a |
