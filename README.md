@@ -51,7 +51,7 @@ No requirements.
 |------|--------|---------|
 | <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/ACE-GCP-Log-Export-Pubsub | n/a |
 | <a name="module_gcs"></a> [gcs](#module\_gcs) | github.com/Coalfire-CF/ACE-GCP-Cloud-Storage | n/a |
-| <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/GCP-Cloud-KMS | n/a |
+| <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/ACE-GCP-Cloud-KMS | n/a |
 | <a name="module_log_export"></a> [log\_export](#module\_log\_export) | github.com/Coalfire-CF/ACE-GCP-Log-Export | n/a |
 | <a name="module_organization_policies_type_boolean"></a> [organization\_policies\_type\_boolean](#module\_organization\_policies\_type\_boolean) | github.com/Coalfire-CF/ACE-GCP-Org-Policy | n/a |
 | <a name="module_winbastion-administrator"></a> [winbastion-administrator](#module\_winbastion-administrator) | github.com/Coalfire-CF/ACE-GCP-Secret-Manager | n/a |
