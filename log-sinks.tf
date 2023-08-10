@@ -26,7 +26,7 @@ module "log_export" {
 }
 
 module "destination" {
-  source                   = "github.com/Coalfire-CF/ACE-GCP-Log-Export-Pubsub"
+  source                   = "github.com/Coalfire-CF/ACE-GCP-Log-Export/modules/pubsub"
   project_id               = google_project.management.project_id
   topic_name               = "${var.topic_prefix}-org-logs-${random_string.suffix_sink.result}"
   log_sink_writer_identity = module.log_export.writer_identity
