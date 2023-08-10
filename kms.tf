@@ -14,7 +14,7 @@ locals {
 *************************************************/
 
 module "kms" {
-  source = "github.com/Coalfire-CF/GCP-Cloud-KMS"
+  source = "github.com/Coalfire-CF/ACE-GCP-Cloud-KMS"
 
   project_id = google_project.management.project_id
   location   = var.region
