@@ -16,7 +16,7 @@ The purpose of this module is to help bootstrap a GCP organization, creating all
 
 ```
 module "bootstrap" {
-  source = "github.com/Coalfire-CF/ACE-GCP-Security-Core"
+  source = "github.com/Coalfire-CF/terraform-gcp-security-core"
 
   org_id           = var.org_id
   aw_folder_id     = var.aw_folder_id
