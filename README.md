@@ -119,6 +119,7 @@ No requirements.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_cs_buckets"></a> [cs\_buckets](#output\_cs\_buckets) | n/a |
 | <a name="output_gce-ssh-private-key"></a> [gce-ssh-private-key](#output\_gce-ssh-private-key) | n/a |
 | <a name="output_group_org_admins"></a> [group\_org\_admins](#output\_group\_org\_admins) | n/a |
 | <a name="output_kms_keys"></a> [kms\_keys](#output\_kms\_keys) | n/a |
