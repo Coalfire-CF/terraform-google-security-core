@@ -1,3 +1,5 @@
+![Coalfire](coalfire_logo.png)
+
 # Google Cloud Security Core Terraform Module
 
 ## Description
@@ -11,6 +13,8 @@ The purpose of this module is to help bootstrap a GCP organization, creating all
 - Create an organization log sink and destination
 - Configure organization policies
 - Enable audit logging
+
+Coalfire has tested this module with Terraform version 1.5.0 and the Hashicorp Google provider versions 4.70 - 5.0.
 
 ### Usage
 
