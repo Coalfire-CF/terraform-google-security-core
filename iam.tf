@@ -22,42 +22,6 @@ resource "google_organization_iam_audit_config" "org_config" {
   }
 }
 
-resource "google_folder_iam_audit_config" "fldr_config" {
-  for_each = { for i, fldr in [
-    data.google_folder.aw_folder.name,
-    google_folder.management.name,
-    google_folder.networking.name,
-    google_folder.application.name,
-  ] : i => fldr }
-
-  folder  = each.value
-  service = "allServices"
-
-  dynamic "audit_log_config" {
-    for_each = toset(["DATA_READ", "DATA_WRITE", "ADMIN_READ"])
-    content {
-      log_type = audit_log_config.key
-    }
-  }
-}
-
-resource "google_project_iam_audit_config" "prj_config" {
-  for_each = { for i, prj in [
-    google_project.management.id,
-    google_project.networking.id
-  ] : i => prj }
-
-  project = each.value
-  service = "allServices"
-
-  dynamic "audit_log_config" {
-    for_each = toset(["DATA_READ", "DATA_WRITE", "ADMIN_READ"])
-    content {
-      log_type = audit_log_config.key
-    }
-  }
-}
-
 /*************************************************
   Grant Cloud Storage svc acct access to CMEK
 *************************************************/
