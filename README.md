@@ -69,7 +69,6 @@ No requirements.
 | [google_folder.application](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/folder) | resource |
 | [google_folder.management](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/folder) | resource |
 | [google_folder.networking](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/folder) | resource |
-| [google_folder_iam_audit_config.fldr_config](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/folder_iam_audit_config) | resource |
 | [google_kms_crypto_key_iam_member.ce_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/kms_crypto_key_iam_member) | resource |
 | [google_kms_crypto_key_iam_member.gcs_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/kms_crypto_key_iam_member) | resource |
 | [google_kms_crypto_key_iam_member.ps_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/kms_crypto_key_iam_member) | resource |
@@ -78,7 +77,6 @@ No requirements.
 | [google_organization_iam_member.org_admins](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/organization_iam_member) | resource |
 | [google_project.management](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project) | resource |
 | [google_project.networking](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project) | resource |
-| [google_project_iam_audit_config.prj_config](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_audit_config) | resource |
 | [google_project_iam_custom_role.start_stop_role](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_custom_role) | resource |
 | [google_project_iam_member.start_stop_role_member](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_member) | resource |
 | [google_project_service.management](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_service) | resource |
