@@ -53,12 +53,17 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/ACE-GCP-Log-Export/modules/pubsub | n/a |
-| <a name="module_gcs"></a> [gcs](#module\_gcs) | github.com/Coalfire-CF/ACE-GCP-Cloud-Storage | n/a |
-| <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/ACE-GCP-Cloud-KMS | n/a |
-| <a name="module_log_export"></a> [log\_export](#module\_log\_export) | github.com/Coalfire-CF/ACE-GCP-Log-Export | n/a |
-| <a name="module_organization_policies_type_boolean"></a> [organization\_policies\_type\_boolean](#module\_organization\_policies\_type\_boolean) | github.com/Coalfire-CF/ACE-GCP-Org-Policy | n/a |
-| <a name="module_winbastion-administrator"></a> [winbastion-administrator](#module\_winbastion-administrator) | github.com/Coalfire-CF/ACE-GCP-Secret-Manager | n/a |
+| <a name="module_application_folder"></a> [application\_folder](#module\_application\_folder) | github.com/Coalfire-CF/terraform-gcp-folder | n/a |
+| <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/terraform-google-log-export/modules/pubsub | n/a |
+| <a name="module_gcs"></a> [gcs](#module\_gcs) | github.com/Coalfire-CF/terraform-google-cloud-storage | n/a |
+| <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/terraform-google-kms | n/a |
+| <a name="module_log_export"></a> [log\_export](#module\_log\_export) | github.com/Coalfire-CF/terraform-google-log-export | n/a |
+| <a name="module_management_folder"></a> [management\_folder](#module\_management\_folder) | github.com/Coalfire-CF/terraform-gcp-folder | n/a |
+| <a name="module_management_project"></a> [management\_project](#module\_management\_project) | github.com/Coalfire-CF/terraform-gcp-project | n/a |
+| <a name="module_networking_folder"></a> [networking\_folder](#module\_networking\_folder) | github.com/Coalfire-CF/terraform-gcp-folder | n/a |
+| <a name="module_networking_project"></a> [networking\_project](#module\_networking\_project) | github.com/Coalfire-CF/terraform-gcp-project | n/a |
+| <a name="module_organization_policies_type_boolean"></a> [organization\_policies\_type\_boolean](#module\_organization\_policies\_type\_boolean) | github.com/Coalfire-CF/terraform-google-org-policy | n/a |
+| <a name="module_winbastion-administrator"></a> [winbastion-administrator](#module\_winbastion-administrator) | github.com/Coalfire-CF/terraform-google-secret-manager | n/a |
 
 ## Resources
 
@@ -66,23 +71,14 @@ No requirements.
 |------|------|
 | [google-beta_google_project_service_identity.sm_sa](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/resources/google_project_service_identity) | resource |
 | [google_compute_project_metadata.metadata](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_project_metadata) | resource |
-| [google_folder.application](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/folder) | resource |
-| [google_folder.management](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/folder) | resource |
-| [google_folder.networking](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/folder) | resource |
 | [google_kms_crypto_key_iam_member.ce_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/kms_crypto_key_iam_member) | resource |
 | [google_kms_crypto_key_iam_member.gcs_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/kms_crypto_key_iam_member) | resource |
 | [google_kms_crypto_key_iam_member.ps_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/kms_crypto_key_iam_member) | resource |
 | [google_kms_crypto_key_iam_member.sm_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/kms_crypto_key_iam_member) | resource |
 | [google_organization_iam_audit_config.org_config](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/organization_iam_audit_config) | resource |
 | [google_organization_iam_member.org_admins](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/organization_iam_member) | resource |
-| [google_project.management](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project) | resource |
-| [google_project.networking](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project) | resource |
 | [google_project_iam_custom_role.start_stop_role](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_custom_role) | resource |
 | [google_project_iam_member.start_stop_role_member](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_member) | resource |
-| [google_project_service.management](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_service) | resource |
-| [google_project_service.networking](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_service) | resource |
-| [google_resource_manager_lien.management](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/resource_manager_lien) | resource |
-| [google_resource_manager_lien.networking](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/resource_manager_lien) | resource |
 | [google_secret_manager_secret.gce_ssh_private_key](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/secret_manager_secret) | resource |
 | [google_secret_manager_secret_version.gce_ssh_private_key](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/secret_manager_secret_version) | resource |
 | [google_service_account_iam_member.ce_account_user](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account_iam_member) | resource |
