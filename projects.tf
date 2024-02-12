@@ -4,15 +4,11 @@
 
 # Management
 
-resource "random_id" "suffix_management" {
-  byte_length = 2
-}
-
 module "management_project" {
   source = "github.com/Coalfire-CF/terraform-gcp-project"
 
   name            = "${var.project_prefix}-management"
-  project_id      = "${var.project_prefix}-management-${random_id.suffix_management.hex}"
+  project_id      = "${var.project_prefix}-management"
   folder_id       = module.management_folder.folder_id
   billing_account = var.billing_account
   services        = var.management_services
@@ -24,14 +20,10 @@ module "networking_project" {
   source = "github.com/Coalfire-CF/terraform-gcp-project"
 
   name            = "${var.project_prefix}-networking"
-  project_id      = "${var.project_prefix}-networking-${random_id.suffix_networking.hex}"
+  project_id      = "${var.project_prefix}-networking"
   folder_id       = module.networking_folder.folder_id
   billing_account = var.billing_account
   services        = var.networking_services
-}
-
-resource "random_id" "suffix_networking" {
-  byte_length = 2
 }
 
 resource "time_sleep" "wait" {
