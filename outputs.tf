@@ -14,12 +14,12 @@ output "group_org_admins" {
   value = var.group_org_admins
 }
 
-output "gce-ssh-private-key" {
+output "gce_ssh_private_key" {
   value = google_secret_manager_secret.gce_ssh_private_key.id
 }
 
-output "winbastion-administrator" {
-  value = module.winbastion-administrator.secret_names[0]
+output "winbastion_administrator" {
+  value = module.winbastion_administrator.secret_names[0]
 }
 
 output "cs_buckets" {

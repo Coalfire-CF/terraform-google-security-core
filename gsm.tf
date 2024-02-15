@@ -1,14 +1,14 @@
 resource "google_secret_manager_secret" "gce_ssh_private_key" {
   project = module.management_project.project_id
 
-  secret_id = "gce-ssh-private-key"
+  secret_id = "gce_ssh_private_key"
 
   replication {
     user_managed {
       replicas {
         location = var.region
         customer_managed_encryption {
-          kms_key_name = module.kms.keys["secret-manager"]
+          kms_key_name = module.kms.keys["secret_manager"]
         }
       }
     }
@@ -27,18 +27,18 @@ resource "google_secret_manager_secret_version" "gce_ssh_private_key" {
   secret_data = tls_private_key.ssh_key.private_key_pem
 }
 
-module "winbastion-administrator" {
+module "winbastion_administrator" {
   source = "github.com/Coalfire-CF/terraform-google-secret-manager"
 
   project_id = module.management_project.project_id
   region     = var.region
 
   secrets = [{
-    id           = "winbastion-administrator"
+    id           = "winbastion_administrator"
     skip_version = true
   }]
 
-  kms_key_name = module.kms.keys["secret-manager"]
+  kms_key_name = module.kms.keys["secret_manager"]
 
   depends_on = [
     time_sleep.wait
