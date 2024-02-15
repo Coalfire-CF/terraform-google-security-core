@@ -31,7 +31,7 @@ module "destination" {
   topic_name               = "${var.topic_prefix}-org-logs-${random_string.suffix_sink.result}"
   log_sink_writer_identity = module.log_export.writer_identity
   create_subscriber        = true
-  kms_key_name             = module.kms.keys["pub_sub"]
+  kms_key_name             = module.kms.keys["pub-sub"]
 
   depends_on = [
     time_sleep.wait,
