@@ -16,9 +16,9 @@ module "gcs" {
   admins          = ["group:${var.group_org_admins}"]
 
   encryption_key_names = {
-    tfstate  = module.kms.keys["cloud_storage"]
-    backups  = module.kms.keys["cloud_storage"]
-    installs = module.kms.keys["cloud_storage"]
+    tfstate  = module.kms.keys["cloud-storage"]
+    backups  = module.kms.keys["cloud-storage"]
+    installs = module.kms.keys["cloud-storage"]
   }
 
   bucket_lifecycle_rules = {

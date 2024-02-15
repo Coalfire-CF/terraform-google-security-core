@@ -31,7 +31,7 @@ data "google_storage_project_service_account" "gcs_account" {
 }
 
 resource "google_kms_crypto_key_iam_member" "gcs_account" {
-  crypto_key_id = module.kms.keys["cloud_storage"]
+  crypto_key_id = module.kms.keys["cloud-storage"]
   role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
   member        = "serviceAccount:${data.google_storage_project_service_account.gcs_account.email_address}"
 }
@@ -41,7 +41,7 @@ resource "google_kms_crypto_key_iam_member" "gcs_account" {
 *************************************************/
 
 resource "google_kms_crypto_key_iam_member" "ps_account" {
-  crypto_key_id = module.kms.keys["pub_sub"]
+  crypto_key_id = module.kms.keys["pub-sub"]
   role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
   member        = "serviceAccount:service-${module.management_project.project_number}@gcp-sa-pubsub.iam.gserviceaccount.com"
 
@@ -55,7 +55,7 @@ resource "google_kms_crypto_key_iam_member" "ps_account" {
 *************************************************/
 
 resource "google_kms_crypto_key_iam_member" "ce_account" {
-  crypto_key_id = module.kms.keys["compute_engine"]
+  crypto_key_id = module.kms.keys["compute-engine"]
   role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
   member        = "serviceAccount:service-${module.management_project.project_number}@compute-system.iam.gserviceaccount.com"
 
@@ -76,7 +76,7 @@ resource "google_project_service_identity" "sm_sa" {
 }
 
 resource "google_kms_crypto_key_iam_member" "sm_account" {
-  crypto_key_id = module.kms.keys["secret_manager"]
+  crypto_key_id = module.kms.keys["secret-manager"]
   role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
   member        = "serviceAccount:service-${module.management_project.project_number}@gcp-sa-secretmanager.iam.gserviceaccount.com"
 

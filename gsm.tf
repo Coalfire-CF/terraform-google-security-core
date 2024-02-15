@@ -1,14 +1,14 @@
 resource "google_secret_manager_secret" "gce_ssh_private_key" {
   project = module.management_project.project_id
 
-  secret_id = "gce_ssh_private_key"
+  secret_id = "gce-ssh-private-key"
 
   replication {
     user_managed {
       replicas {
         location = var.region
         customer_managed_encryption {
-          kms_key_name = module.kms.keys["secret_manager"]
+          kms_key_name = module.kms.keys["secret-manager"]
         }
       }
     }
@@ -34,11 +34,11 @@ module "winbastion_administrator" {
   region     = var.region
 
   secrets = [{
-    id           = "winbastion_administrator"
+    id           = "winbastion-administrator"
     skip_version = true
   }]
 
-  kms_key_name = module.kms.keys["secret_manager"]
+  kms_key_name = module.kms.keys["secret-manager"]
 
   depends_on = [
     time_sleep.wait
