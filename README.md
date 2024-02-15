@@ -20,7 +20,7 @@ Coalfire has tested this module with Terraform version 1.5.0 and the Hashicorp G
 
 ```
 module "bootstrap" {
-  source = "github.com/Coalfire-CF/terraform-gcp-security-core"
+  source = "github.com/Coalfire-CF/terraform-google-security-core"
 
   org_id           = var.org_id
   aw_folder_id     = var.aw_folder_id
