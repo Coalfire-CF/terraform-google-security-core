@@ -63,7 +63,7 @@ No requirements.
 | <a name="module_networking_folder"></a> [networking\_folder](#module\_networking\_folder) | github.com/Coalfire-CF/terraform-gcp-folder | n/a |
 | <a name="module_networking_project"></a> [networking\_project](#module\_networking\_project) | github.com/Coalfire-CF/terraform-gcp-project | n/a |
 | <a name="module_organization_policies_type_boolean"></a> [organization\_policies\_type\_boolean](#module\_organization\_policies\_type\_boolean) | github.com/Coalfire-CF/terraform-google-org-policy | n/a |
-| <a name="module_winbastion-administrator"></a> [winbastion-administrator](#module\_winbastion-administrator) | github.com/Coalfire-CF/terraform-google-secret-manager | n/a |
+| <a name="module_winbastion_administrator"></a> [winbastion\_administrator](#module\_winbastion\_administrator) | github.com/Coalfire-CF/terraform-google-secret-manager | n/a |
 
 ## Resources
 
@@ -116,10 +116,10 @@ No requirements.
 | Name | Description |
 |------|-------------|
 | <a name="output_cs_buckets"></a> [cs\_buckets](#output\_cs\_buckets) | n/a |
-| <a name="output_gce-ssh-private-key"></a> [gce-ssh-private-key](#output\_gce-ssh-private-key) | n/a |
+| <a name="output_gce_ssh_private_key"></a> [gce\_ssh\_private\_key](#output\_gce\_ssh\_private\_key) | n/a |
 | <a name="output_group_org_admins"></a> [group\_org\_admins](#output\_group\_org\_admins) | n/a |
 | <a name="output_kms_keys"></a> [kms\_keys](#output\_kms\_keys) | n/a |
 | <a name="output_management_project"></a> [management\_project](#output\_management\_project) | n/a |
 | <a name="output_networking_project"></a> [networking\_project](#output\_networking\_project) | n/a |
-| <a name="output_winbastion-administrator"></a> [winbastion-administrator](#output\_winbastion-administrator) | n/a |
+| <a name="output_winbastion_administrator"></a> [winbastion\_administrator](#output\_winbastion\_administrator) | n/a |
 <!-- END_TF_DOCS -->
