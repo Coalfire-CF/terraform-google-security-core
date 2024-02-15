@@ -14,7 +14,7 @@ module "log_export" {
   destination_uri = module.destination.destination_uri
   filter          = var.log_filter
 
-  log_sink_name          = "${var.sink_prefix}_org_${random_string.suffix_sink.result}"
+  log_sink_name          = "${var.sink_prefix}-org-${random_string.suffix_sink.result}"
   parent_resource_id     = var.org_id
   parent_resource_type   = "organization"
   include_children       = true
