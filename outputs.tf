@@ -19,7 +19,7 @@ output "gce_ssh_private_key" {
 }
 
 output "winbastion_administrator" {
-  value = module.winbastion_administrator.secret_names[0]
+  value = module.winbastion_administrator.names[0]
 }
 
 output "cs_buckets" {
