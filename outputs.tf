@@ -6,6 +6,14 @@ output "networking_project" {
   value = module.networking_project
 }
 
+output "kms_key_ring_id" {
+  value = module.kms.keyring
+}
+
+output "kms_key_ring_name" {
+  value = module.kms.keyring_name
+}
+
 output "kms_keys" {
   value = module.kms.keys
 }
