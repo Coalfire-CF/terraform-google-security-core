@@ -6,6 +6,14 @@ output "networking_project" {
   value = module.networking_project
 }
 
+output "management_folder" {
+  value = module.management_folder
+}
+
+output "networking_folder" {
+  value = module.networking_folder
+}
+
 output "kms_key_ring_id" {
   value = module.kms.keyring
 }
