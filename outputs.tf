@@ -26,9 +26,9 @@ output "gce_ssh_private_key" {
   value = google_secret_manager_secret.gce_ssh_private_key.id
 }
 
-output "winbastion_administrator" {
-  value = module.winbastion_administrator.names[0]
-}
+# output "winbastion_administrator" {
+#   value = module.winbastion_administrator.names[0]
+# }
 
 output "cs_buckets" {
   value = module.gcs.names
