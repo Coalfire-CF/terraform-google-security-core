@@ -17,5 +17,9 @@ resource "google_compute_project_metadata" "metadata" {
   depends_on = [
     time_sleep.wait
   ]
+
+  lifecycle {
+    ignore_changes = [metadata["ssh-keys"]]
+  }
 }
 
