@@ -108,6 +108,12 @@ variable "topic_prefix" {
   default     = "ps"
 }
 
+variable "create_log_sinks" {
+  description = "Whether or not to create log sinks"
+  type        = bool
+  default     = true
+}
+
 variable "log_filter" {
   description = "Log export filter."
   type        = string
