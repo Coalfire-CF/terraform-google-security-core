@@ -97,6 +97,7 @@ No requirements.
 | <a name="input_billing_account"></a> [billing\_account](#input\_billing\_account) | The ID of the billing account to associate projects with. | `string` | n/a | yes |
 | <a name="input_boolean_type_organization_policies"></a> [boolean\_type\_organization\_policies](#input\_boolean\_type\_organization\_policies) | List of boolean type org policies to apply. | `list(string)` | <pre>[<br>  "compute.disableNonFIPSMachineTypes",<br>  "compute.skipDefaultNetworkCreation",<br>  "sql.restrictPublicIp",<br>  "storage.publicAccessPrevention"<br>]</pre> | no |
 | <a name="input_bucket_prefix"></a> [bucket\_prefix](#input\_bucket\_prefix) | Prefix for buckets. | `string` | `"bkt"` | no |
+| <a name="input_create_log_sinks"></a> [create\_log\_sinks](#input\_create\_log\_sinks) | Whether or not to create log sinks | `bool` | `true` | no |
 | <a name="input_folder_prefix"></a> [folder\_prefix](#input\_folder\_prefix) | Prefix for folders. | `string` | `"fldr"` | no |
 | <a name="input_group_org_admins"></a> [group\_org\_admins](#input\_group\_org\_admins) | Google Group for GCP Organization Administrators. | `string` | n/a | yes |
 | <a name="input_keyring_prefix"></a> [keyring\_prefix](#input\_keyring\_prefix) | Prefix for key rings. | `string` | `"kr"` | no |
