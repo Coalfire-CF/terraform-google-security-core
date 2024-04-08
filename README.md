@@ -122,6 +122,7 @@ No requirements.
 | <a name="output_kms_key_ring_id"></a> [kms\_key\_ring\_id](#output\_kms\_key\_ring\_id) | n/a |
 | <a name="output_kms_key_ring_name"></a> [kms\_key\_ring\_name](#output\_kms\_key\_ring\_name) | n/a |
 | <a name="output_kms_keys"></a> [kms\_keys](#output\_kms\_keys) | n/a |
+| <a name="output_log_export_bucket"></a> [log\_export\_bucket](#output\_log\_export\_bucket) | n/a |
 | <a name="output_management_folder"></a> [management\_folder](#output\_management\_folder) | n/a |
 | <a name="output_management_project"></a> [management\_project](#output\_management\_project) | n/a |
 | <a name="output_networking_folder"></a> [networking\_folder](#output\_networking\_folder) | n/a |
