@@ -54,10 +54,10 @@ No requirements.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_application_folder"></a> [application\_folder](#module\_application\_folder) | github.com/Coalfire-CF/terraform-google-folder | n/a |
-| <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/terraform-google-log-export/modules/pubsub | n/a |
+| <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/terraform-google-log-export//modules/storage | v1.0.4 |
 | <a name="module_gcs"></a> [gcs](#module\_gcs) | github.com/Coalfire-CF/terraform-google-cloud-storage | n/a |
 | <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/terraform-google-kms | n/a |
-| <a name="module_log_export"></a> [log\_export](#module\_log\_export) | github.com/Coalfire-CF/terraform-google-log-export | n/a |
+| <a name="module_log_export"></a> [log\_export](#module\_log\_export) | github.com/Coalfire-CF/terraform-google-log-export | v1.0.4 |
 | <a name="module_management_folder"></a> [management\_folder](#module\_management\_folder) | github.com/Coalfire-CF/terraform-google-folder | n/a |
 | <a name="module_management_project"></a> [management\_project](#module\_management\_project) | github.com/Coalfire-CF/terraform-google-project | n/a |
 | <a name="module_networking_folder"></a> [networking\_folder](#module\_networking\_folder) | github.com/Coalfire-CF/terraform-google-folder | n/a |
@@ -97,7 +97,7 @@ No requirements.
 | <a name="input_billing_account"></a> [billing\_account](#input\_billing\_account) | The ID of the billing account to associate projects with. | `string` | n/a | yes |
 | <a name="input_boolean_type_organization_policies"></a> [boolean\_type\_organization\_policies](#input\_boolean\_type\_organization\_policies) | List of boolean type org policies to apply. | `list(string)` | <pre>[<br>  "compute.disableNonFIPSMachineTypes",<br>  "compute.skipDefaultNetworkCreation",<br>  "sql.restrictPublicIp",<br>  "storage.publicAccessPrevention"<br>]</pre> | no |
 | <a name="input_bucket_prefix"></a> [bucket\_prefix](#input\_bucket\_prefix) | Prefix for buckets. | `string` | `"bkt"` | no |
-| <a name="input_create_log_sinks"></a> [create\_log\_sinks](#input\_create\_log\_sinks) | Whether or not to create log sinks | `bool` | `true` | no |
+| <a name="input_create_log_export"></a> [create\_log\_export](#input\_create\_log\_export) | Whether or not to create log export | `bool` | `true` | no |
 | <a name="input_folder_prefix"></a> [folder\_prefix](#input\_folder\_prefix) | Prefix for folders. | `string` | `"fldr"` | no |
 | <a name="input_group_org_admins"></a> [group\_org\_admins](#input\_group\_org\_admins) | Google Group for GCP Organization Administrators. | `string` | n/a | yes |
 | <a name="input_keyring_prefix"></a> [keyring\_prefix](#input\_keyring\_prefix) | Prefix for key rings. | `string` | `"kr"` | no |
