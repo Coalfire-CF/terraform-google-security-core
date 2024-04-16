@@ -40,6 +40,14 @@ resource "google_kms_crypto_key_iam_binding" "cloudsql_sa_kms_crypto" {
   ]
 }
 
+resource "google_kms_crypto_key_iam_binding" "cloudsql_sa_viewer" {
+  crypto_key_id = module.kms.keys["cloud-sql"]
+  role          = "roles/cloudkms.viewer"
+  members = [
+    "serviceAccount:${google_project_service_identity.cloudsql_sa.email}",
+  ]
+}
+
 /*************************************************
   Grant Cloud Storage svc acct access to CMEK
 *************************************************/
