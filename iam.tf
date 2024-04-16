@@ -23,6 +23,24 @@ resource "google_organization_iam_audit_config" "org_config" {
 }
 
 /*************************************************
+  Grant Cloud SQL svc acct access to CMEK
+*************************************************/
+resource "google_project_service_identity" "cloudsql_sa" {
+  provider = google-beta
+
+  project = module.management_project.project_id
+  service = "sqladmin.googleapis.com"
+}
+
+resource "google_kms_crypto_key_iam_binding" "cloudsql_sa_kms_crypto" {
+  crypto_key_id = module.kms.keys["cloud-sql"]
+  role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
+  members = [
+    "serviceAccount:${google_project_service_identity.cloudsql_sa.email}",
+  ]
+}
+
+/*************************************************
   Grant Cloud Storage svc acct access to CMEK
 *************************************************/
 
