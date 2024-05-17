@@ -38,6 +38,15 @@ module "destination" {
   location                 = var.region
   kms_key_name             = module.kms.keys["cloud-storage"]
 
+  lifecycle_rules = [{
+    action = {
+      type = "Delete"
+    }
+    condition = {
+      age = 30
+    }
+  }]
+
   depends_on = [
     time_sleep.wait
   ]
