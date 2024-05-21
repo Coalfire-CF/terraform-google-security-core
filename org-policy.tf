@@ -17,11 +17,14 @@ module "organization_policies_type_boolean" {
 module "organization_policies_domain_restricted_sharing" {
   source = "github.com/Coalfire-CF/terraform-google-org-policy"
 
-  organization_id   = var.org_id
-  policy_for        = "organization"
-  policy_type       = "list"
-  enforce           = "true"
-  constraint        = "constraints/iam.allowedPolicyMemberDomains"
-  allow             = ["principalSet://iam.googleapis.com/organizations/${var.org_id}"]
-  allow_list_length = 1
+  organization_id = var.org_id
+  policy_for      = "organization"
+  policy_type     = "list"
+  enforce         = "true"
+  constraint      = "constraints/iam.allowedPolicyMemberDomains"
+  allow = [
+    "principalSet://iam.googleapis.com/organizations/${var.org_id}",
+    var.workspace_id
+  ]
+  allow_list_length = 2
 }

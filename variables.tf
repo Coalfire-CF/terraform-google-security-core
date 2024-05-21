@@ -3,6 +3,11 @@ variable "org_id" {
   type        = string
 }
 
+variable "workspace_id" {
+  description = "Workspace / Cloud Identity ID - get via `gcloud organizations list` from DIRECTORY_CUSTOMER_ID"
+  type        = string
+}
+
 variable "aw_folder_id" {
   description = "Assured Workloads folder ID."
   type        = string
