@@ -5,7 +5,7 @@
 # Management
 
 module "management_project" {
-  source = "github.com/Coalfire-CF/terraform-google-project"
+  source = "github.com/Coalfire-CF/terraform-google-project?ref=v1.0.4"
 
   name            = "${var.project_prefix}-management"
   project_id      = "${var.project_prefix}-management"
@@ -17,7 +17,7 @@ module "management_project" {
 # Networking
 
 module "networking_project" {
-  source = "github.com/Coalfire-CF/terraform-google-project"
+  source = "github.com/Coalfire-CF/terraform-google-project?ref=v1.0.4"
 
   name            = "${var.project_prefix}-networking"
   project_id      = "${var.project_prefix}-networking"
