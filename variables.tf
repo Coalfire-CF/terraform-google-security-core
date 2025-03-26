@@ -140,31 +140,36 @@ variable "ssh_user" {
 
 variable "management_folder" {
   description = "Boolean value to determine if folder should be created."
-  type = bool
-  default = true
+  type        = bool
+  default     = true
 }
 
 variable "networking_folder" {
   description = "Boolean value to determine if folder should be created."
-  type = bool
-  default = true
+  type        = bool
+  default     = true
 }
 
 variable "application_folder" {
   description = "Boolean value to determine if folder should be created."
-  type = bool
-  default = true
+  type        = bool
+  default     = true
 }
 
 variable "management_project" {
   description = "Boolean value to determine if project should be created."
-  type = bool
-  default = true
+  type        = bool
+  default     = true
 }
 
 variable "networking_project" {
   description = "Boolean value to determine if project should be created."
-  type = bool
-  default = true
+  type        = bool
+  default     = true
 }
 
+variable "prevent_destroy" {
+  type        = bool
+  description = "Prevent KMS Key Ring from destory"
+  default     = true
+}

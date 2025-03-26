@@ -14,7 +14,7 @@ locals {
 *************************************************/
 
 module "kms" {
-  source = "github.com/Coalfire-CF/terraform-google-kms?ref=v1.0.4"
+  source = "github.com/Coalfire-CF/terraform-google-kms?ref=fix-prevent-destroy"
 
   project_id = module.management_project[0].project_id
   location   = var.region
@@ -22,6 +22,8 @@ module "kms" {
   keys       = local.cmeks
 
   key_rotation_period = "31536000s"
+
+  prevent_destroy = var.prevent_destroy
 
   depends_on = [
     time_sleep.wait
