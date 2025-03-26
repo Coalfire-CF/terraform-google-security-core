@@ -11,7 +11,7 @@ module "management_project" {
 
   name            = "${var.project_prefix}-management"
   project_id      = "${var.project_prefix}-management"
-  folder_id       = module.management_folder.folder_id
+  folder_id       = module.management_folder[0].folder_id
   billing_account = var.billing_account
   services        = var.management_services
 }
@@ -25,7 +25,7 @@ module "networking_project" {
 
   name            = "${var.project_prefix}-networking"
   project_id      = "${var.project_prefix}-networking"
-  folder_id       = module.networking_folder.folder_id
+  folder_id       = module.networking_folder[0].folder_id
   billing_account = var.billing_account
   services        = var.networking_services
 }
