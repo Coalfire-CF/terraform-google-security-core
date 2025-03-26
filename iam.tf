@@ -69,7 +69,7 @@ resource "google_kms_crypto_key_iam_member" "gcs_account" {
 resource "google_kms_crypto_key_iam_member" "ps_account" {
   crypto_key_id = module.kms.keys["pub-sub"]
   role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
-  member        = "serviceAccount:service-${module.management_project.project_number}@gcp-sa-pubsub.iam.gserviceaccount.com"
+  member        = "serviceAccount:service-${module.management_project[0].project_number}@gcp-sa-pubsub.iam.gserviceaccount.com"
 
   depends_on = [
     time_sleep.wait
@@ -83,7 +83,7 @@ resource "google_kms_crypto_key_iam_member" "ps_account" {
 resource "google_kms_crypto_key_iam_member" "ce_account" {
   crypto_key_id = module.kms.keys["compute-engine"]
   role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
-  member        = "serviceAccount:service-${module.management_project.project_number}@compute-system.iam.gserviceaccount.com"
+  member        = "serviceAccount:service-${module.management_project[0].project_number}@compute-system.iam.gserviceaccount.com"
 
   depends_on = [
     time_sleep.wait
@@ -104,7 +104,7 @@ resource "google_project_service_identity" "sm_sa" {
 resource "google_kms_crypto_key_iam_member" "sm_account" {
   crypto_key_id = module.kms.keys["secret-manager"]
   role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
-  member        = "serviceAccount:service-${module.management_project.project_number}@gcp-sa-secretmanager.iam.gserviceaccount.com"
+  member        = "serviceAccount:service-${module.management_project[0].project_number}@gcp-sa-secretmanager.iam.gserviceaccount.com"
 
   depends_on = [
     time_sleep.wait,
@@ -145,7 +145,7 @@ resource "google_project_iam_custom_role" "start_stop_role" {
 resource "google_project_iam_member" "start_stop_role_member" {
   project = module.management_project[0].project_id
   role    = google_project_iam_custom_role.start_stop_role.id
-  member  = "serviceAccount:service-${module.management_project.project_number}@compute-system.iam.gserviceaccount.com"
+  member  = "serviceAccount:service-${module.management_project[0].project_number}@compute-system.iam.gserviceaccount.com"
 
   depends_on = [
     time_sleep.wait
