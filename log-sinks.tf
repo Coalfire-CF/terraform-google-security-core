@@ -32,7 +32,7 @@ module "destination" {
 
   count = var.create_log_export ? 1 : 0
 
-  project_id               = module.management_project.project_id
+  project_id               = module.management_project[0].project_id
   storage_bucket_name      = "${var.bucket_prefix}-org-logs-${random_string.suffix_sink.result}"
   log_sink_writer_identity = module.log_export[0].writer_identity
   location                 = var.region

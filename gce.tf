@@ -4,7 +4,7 @@ resource "tls_private_key" "ssh_key" {
 }
 
 resource "google_compute_project_metadata" "metadata" {
-  project = module.management_project.project_id
+  project = module.management_project[0].project_id
 
   metadata = {
     VmDnsSetting               = "GlobalDefault"

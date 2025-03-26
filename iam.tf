@@ -28,7 +28,7 @@ resource "google_organization_iam_audit_config" "org_config" {
 resource "google_project_service_identity" "cloudsql_sa" {
   provider = google-beta
 
-  project = module.management_project.project_id
+  project = module.management_project[0].project_id
   service = "sqladmin.googleapis.com"
 }
 
@@ -53,7 +53,7 @@ resource "google_kms_crypto_key_iam_binding" "cloudsql_sa_viewer" {
 *************************************************/
 
 data "google_storage_project_service_account" "gcs_account" {
-  project = module.management_project.project_id
+  project = module.management_project[0].project_id
 }
 
 resource "google_kms_crypto_key_iam_member" "gcs_account" {
@@ -97,7 +97,7 @@ resource "google_kms_crypto_key_iam_member" "ce_account" {
 resource "google_project_service_identity" "sm_sa" {
   provider = google-beta
 
-  project = module.management_project.project_id
+  project = module.management_project[0].project_id
   service = "secretmanager.googleapis.com"
 }
 
@@ -118,7 +118,7 @@ resource "google_kms_crypto_key_iam_member" "sm_account" {
 *************************************************/
 
 data "google_compute_default_service_account" "default" {
-  project = module.management_project.project_id
+  project = module.management_project[0].project_id
 }
 
 resource "google_service_account_iam_member" "ce_account_user" {
@@ -135,7 +135,7 @@ resource "google_service_account_iam_member" "ce_account_user" {
   This is required for starting/stopping instances via instance scheduler
 *************************************************/
 resource "google_project_iam_custom_role" "start_stop_role" {
-  project     = module.management_project.project_id
+  project     = module.management_project[0].project_id
   role_id     = "rl_instancescheduler"
   title       = "Compute Engine Instance Scheduler"
   description = "Custom Role for Compute Engine Instance Schedules"
@@ -143,7 +143,7 @@ resource "google_project_iam_custom_role" "start_stop_role" {
 }
 
 resource "google_project_iam_member" "start_stop_role_member" {
-  project = module.management_project.project_id
+  project = module.management_project[0].project_id
   role    = google_project_iam_custom_role.start_stop_role.id
   member  = "serviceAccount:service-${module.management_project.project_number}@compute-system.iam.gserviceaccount.com"
 

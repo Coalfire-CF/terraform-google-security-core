@@ -1,5 +1,5 @@
 resource "google_secret_manager_secret" "gce_ssh_private_key" {
-  project = module.management_project.project_id
+  project = module.management_project[0].project_id
 
   secret_id = "gce-ssh-private-key"
 
@@ -30,7 +30,7 @@ resource "google_secret_manager_secret_version" "gce_ssh_private_key" {
 module "winbastion_administrator" {
   source = "github.com/Coalfire-CF/terraform-google-secret-manager?ref=v1.0.6"
 
-  project_id = module.management_project.project_id
+  project_id = module.management_project[0].project_id
   region     = var.region
 
   secrets = [{
