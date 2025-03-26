@@ -167,9 +167,3 @@ variable "networking_project" {
   type        = bool
   default     = true
 }
-
-variable "prevent_destroy" {
-  type        = bool
-  description = "Prevent KMS Key Ring from destory"
-  default     = true
-}
