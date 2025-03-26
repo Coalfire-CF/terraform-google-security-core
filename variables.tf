@@ -72,6 +72,11 @@ variable "networking_services" {
   type        = list(string)
 }
 
+variable "application_services" {
+  description = "APIs & Services to enable for application project."
+  type        = list(string)
+}
+
 variable "region" {
   description = "The GCP region to create resources in."
   type        = string

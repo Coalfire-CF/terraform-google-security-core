@@ -17,7 +17,9 @@ module "management_folder" {
 
 module "networking_folder" {
   source = "github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.3"
-  count  = var.networking_folder ? 1 : 0
+
+  count = var.networking_folder ? 1 : 0
+
   name   = "${var.folder_prefix}-networking"
   parent = data.google_folder.aw_folder.name
 }
