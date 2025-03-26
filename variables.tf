@@ -65,16 +65,54 @@ variable "boolean_type_organization_policies" {
 variable "management_services" {
   description = "APIs & Services to enable for management project."
   type        = list(string)
+  default = [
+    "cloudkms.googleapis.com",
+    "compute.googleapis.com",
+    "logging.googleapis.com",
+    "monitoring.googleapis.com",
+    "pubsub.googleapis.com",
+    "secretmanager.googleapis.com",
+    "sourcerepo.googleapis.com",
+    "privateca.googleapis.com",
+    "iap.googleapis.com",
+    "websecurityscanner.googleapis.com",
+    "osconfig.googleapis.com",
+    "certificatemanager.googleapis.com"
+  ]
 }
 
 variable "networking_services" {
   description = "APIs & Services to enable for networking project."
   type        = list(string)
+  default = [
+    "compute.googleapis.com",
+    "dns.googleapis.com",
+    "logging.googleapis.com",
+    "servicenetworking.googleapis.com",
+    "secretmanager.googleapis.com",
+    "pubsub.googleapis.com",
+    "cloudkms.googleapis.com",
+    "certificatemanager.googleapis.com"
+  ]
 }
 
 variable "application_services" {
   description = "APIs & Services to enable for application project."
   type        = list(string)
+  default = [
+    "cloudkms.googleapis.com",
+    "compute.googleapis.com",
+    "logging.googleapis.com",
+    "monitoring.googleapis.com",
+    "pubsub.googleapis.com",
+    "secretmanager.googleapis.com",
+    "sourcerepo.googleapis.com",
+    "privateca.googleapis.com",
+    "iap.googleapis.com",
+    "websecurityscanner.googleapis.com",
+    "osconfig.googleapis.com",
+    "certificatemanager.googleapis.com"
+  ]
 }
 
 variable "region" {
