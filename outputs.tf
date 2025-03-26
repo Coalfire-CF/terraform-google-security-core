@@ -1,17 +1,17 @@
 output "management_project" {
-  value = module.management_project
+  value = try(module.management_project, null)
 }
 
 output "networking_project" {
-  value = module.networking_project
+  value = try(module.networking_project, null)
 }
 
 output "management_folder" {
-  value = module.management_folder
+  value = try(module.management_folder, null)
 }
 
 output "networking_folder" {
-  value = module.networking_folder
+  value = try(module.networking_folder, null)
 }
 
 output "kms_key_ring_id" {
