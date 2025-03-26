@@ -54,6 +54,7 @@ No requirements.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_application_folder"></a> [application\_folder](#module\_application\_folder) | github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
+| <a name="module_application_project"></a> [application\_project](#module\_application\_project) | github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
 | <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/terraform-google-log-export//modules/storage | v1.0.4 |
 | <a name="module_gcs"></a> [gcs](#module\_gcs) | github.com/Coalfire-CF/terraform-google-cloud-storage | v1.0.4 |
 | <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/terraform-google-kms | v1.0.4 |
@@ -98,6 +99,7 @@ No requirements.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_application_folder"></a> [application\_folder](#input\_application\_folder) | Boolean value to determine if folder should be created. | `bool` | `true` | no |
+| <a name="input_application_services"></a> [application\_services](#input\_application\_services) | APIs & Services to enable for application project. | `list(string)` | n/a | yes |
 | <a name="input_aw_folder_id"></a> [aw\_folder\_id](#input\_aw\_folder\_id) | Assured Workloads folder ID. | `string` | n/a | yes |
 | <a name="input_billing_account"></a> [billing\_account](#input\_billing\_account) | The ID of the billing account to associate projects with. | `string` | n/a | yes |
 | <a name="input_boolean_type_organization_policies"></a> [boolean\_type\_organization\_policies](#input\_boolean\_type\_organization\_policies) | List of boolean type org policies to apply. | `list(string)` | <pre>[<br/>  "compute.disableNonFIPSMachineTypes",<br/>  "compute.skipDefaultNetworkCreation",<br/>  "sql.restrictPublicIp",<br/>  "storage.publicAccessPrevention"<br/>]</pre> | no |
@@ -126,6 +128,8 @@ No requirements.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_application_folder"></a> [application\_folder](#output\_application\_folder) | n/a |
+| <a name="output_application_project"></a> [application\_project](#output\_application\_project) | n/a |
 | <a name="output_cs_buckets"></a> [cs\_buckets](#output\_cs\_buckets) | n/a |
 | <a name="output_gce_ssh_private_key"></a> [gce\_ssh\_private\_key](#output\_gce\_ssh\_private\_key) | n/a |
 | <a name="output_group_org_admins"></a> [group\_org\_admins](#output\_group\_org\_admins) | n/a |
