@@ -56,7 +56,7 @@ No requirements.
 | <a name="module_application_folder"></a> [application\_folder](#module\_application\_folder) | github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
 | <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/terraform-google-log-export//modules/storage | v1.0.4 |
 | <a name="module_gcs"></a> [gcs](#module\_gcs) | github.com/Coalfire-CF/terraform-google-cloud-storage | v1.0.4 |
-| <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/terraform-google-kms | v1.0.4 |
+| <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/terraform-google-kms | fix-prevent-destroy |
 | <a name="module_log_export"></a> [log\_export](#module\_log\_export) | github.com/Coalfire-CF/terraform-google-log-export | v1.0.4 |
 | <a name="module_management_folder"></a> [management\_folder](#module\_management\_folder) | github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
 | <a name="module_management_project"></a> [management\_project](#module\_management\_project) | github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
@@ -115,6 +115,7 @@ No requirements.
 | <a name="input_networking_services"></a> [networking\_services](#input\_networking\_services) | APIs & Services to enable for networking project. | `list(string)` | n/a | yes |
 | <a name="input_org_admin_roles"></a> [org\_admin\_roles](#input\_org\_admin\_roles) | List of roles to assign to org admins. | `list(string)` | <pre>[<br/>  "roles/assuredworkloads.admin",<br/>  "roles/billing.user",<br/>  "roles/cloudkms.admin",<br/>  "roles/cloudsql.admin",<br/>  "roles/compute.admin",<br/>  "roles/compute.instanceAdmin",<br/>  "roles/compute.networkAdmin",<br/>  "roles/compute.securityAdmin",<br/>  "roles/compute.xpnAdmin",<br/>  "roles/dns.admin",<br/>  "roles/iam.securityAdmin",<br/>  "roles/iam.serviceAccountAdmin",<br/>  "roles/iam.serviceAccountUser",<br/>  "roles/logging.admin",<br/>  "roles/orgpolicy.policyAdmin",<br/>  "roles/pubsub.admin",<br/>  "roles/resourcemanager.folderAdmin",<br/>  "roles/resourcemanager.organizationAdmin",<br/>  "roles/secretmanager.admin",<br/>  "roles/source.admin",<br/>  "roles/storage.admin"<br/>]</pre> | no |
 | <a name="input_org_id"></a> [org\_id](#input\_org\_id) | GCP Organization ID | `string` | n/a | yes |
+| <a name="input_prevent_destroy"></a> [prevent\_destroy](#input\_prevent\_destroy) | Prevent KMS Key Ring from destory | `bool` | `true` | no |
 | <a name="input_project_prefix"></a> [project\_prefix](#input\_project\_prefix) | Prefix for projects. | `string` | `"prj"` | no |
 | <a name="input_region"></a> [region](#input\_region) | The GCP region to create resources in. | `string` | n/a | yes |
 | <a name="input_sink_prefix"></a> [sink\_prefix](#input\_sink\_prefix) | Prefix for sinks. | `string` | `"sk"` | no |
