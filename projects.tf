@@ -45,7 +45,7 @@ module "application_project" {
 }
 
 resource "time_sleep" "wait" {
-  create_duration = "120s"
+  create_duration = "180s"
 
   depends_on = [module.management_project, module.networking_project, module.application_project]
 }

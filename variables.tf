@@ -199,14 +199,8 @@ variable "application_folder" {
   default     = true
 }
 
-# variable "management_project" {
-#   description = "Boolean value to determine if project should be created."
-#   type        = bool
-#   default     = true
-# }
-
-# variable "networking_project" {
-#   description = "Boolean value to determine if project should be created."
-#   type        = bool
-#   default     = true
-# }
+variable "winbastion_administrator_secret" {
+  description = "Boolean value to determine if WinBastion Administrator secret should be created."
+  type        = bool
+  default     = false
+}
