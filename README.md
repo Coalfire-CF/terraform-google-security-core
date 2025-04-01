@@ -120,6 +120,7 @@ No requirements.
 | <a name="input_sink_prefix"></a> [sink\_prefix](#input\_sink\_prefix) | Prefix for sinks. | `string` | `"sk"` | no |
 | <a name="input_ssh_user"></a> [ssh\_user](#input\_ssh\_user) | Default user for SSH access | `string` | `"gce-user"` | no |
 | <a name="input_topic_prefix"></a> [topic\_prefix](#input\_topic\_prefix) | Prefix for topics. | `string` | `"ps"` | no |
+| <a name="input_winbastion_administrator_secret"></a> [winbastion\_administrator\_secret](#input\_winbastion\_administrator\_secret) | Boolean value to determine if WinBastion Administrator secret should be created. | `bool` | `false` | no |
 | <a name="input_workspace_id"></a> [workspace\_id](#input\_workspace\_id) | Workspace / Cloud Identity ID - get via `gcloud organizations list` from DIRECTORY\_CUSTOMER\_ID | `string` | n/a | yes |
 
 ## Outputs
