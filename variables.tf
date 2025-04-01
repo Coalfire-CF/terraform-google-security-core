@@ -181,12 +181,6 @@ variable "ssh_user" {
   default     = "gce-user"
 }
 
-variable "management_folder" {
-  description = "Boolean value to determine if folder should be created."
-  type        = bool
-  default     = true
-}
-
 variable "networking_folder" {
   description = "Boolean value to determine if folder should be created."
   type        = bool

@@ -9,8 +9,6 @@ data "google_folder" "aw_folder" {
 module "management_folder" {
   source = "github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.3"
 
-  count = var.management_folder ? 1 : 0
-
   name   = "${var.folder_prefix}-management"
   parent = data.google_folder.aw_folder.name
 }

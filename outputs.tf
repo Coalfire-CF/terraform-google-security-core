@@ -11,7 +11,7 @@ output "application_project" {
 }
 
 output "management_folder" {
-  value = try(module.management_folder[0], null)
+  value = module.management_folder
 }
 
 output "networking_folder" {
