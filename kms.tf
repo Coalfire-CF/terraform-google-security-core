@@ -16,7 +16,7 @@ locals {
 module "kms" {
   source = "github.com/Coalfire-CF/terraform-google-kms?ref=v1.0.4"
 
-  project_id = module.management_project[0].project_id
+  project_id = module.management_project.project_id
   location   = var.region
   keyring    = "${var.keyring_prefix}-cmeks"
   keys       = local.cmeks

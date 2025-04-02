@@ -1,5 +1,5 @@
 output "management_project" {
-  value = try(module.management_project[0], null)
+  value = try(module.management_project, null)
 }
 
 output "networking_project" {

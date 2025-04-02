@@ -5,7 +5,7 @@
 module "gcs" {
   source = "github.com/Coalfire-CF/terraform-google-cloud-storage?ref=v1.0.4"
 
-  project_id = module.management_project[0].project_id
+  project_id = module.management_project.project_id
   names = [
     "tfstate",
     "backups",

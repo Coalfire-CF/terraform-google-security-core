@@ -1,5 +1,5 @@
 resource "google_secret_manager_secret" "gce_ssh_private_key" {
-  project = module.management_project[0].project_id
+  project = module.management_project.project_id
 
   secret_id = "gce-ssh-private-key"
 
@@ -32,7 +32,7 @@ module "winbastion_administrator" {
 
   count = var.winbastion_administrator_secret ? 1 : 0
 
-  project_id = module.management_project[0].project_id
+  project_id = module.management_project.project_id
   region     = var.region
 
   secrets = [{
