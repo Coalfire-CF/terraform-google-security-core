@@ -54,6 +54,7 @@ No requirements.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_application_folder"></a> [application\_folder](#module\_application\_folder) | github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
+| <a name="module_application_project"></a> [application\_project](#module\_application\_project) | github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
 | <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/terraform-google-log-export//modules/storage | v1.0.4 |
 | <a name="module_gcs"></a> [gcs](#module\_gcs) | github.com/Coalfire-CF/terraform-google-cloud-storage | v1.0.4 |
 | <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/terraform-google-kms | v1.0.4 |
@@ -97,30 +98,36 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_application_folder"></a> [application\_folder](#input\_application\_folder) | Boolean value to determine if folder should be created. | `bool` | `true` | no |
+| <a name="input_application_services"></a> [application\_services](#input\_application\_services) | APIs & Services to enable for application project. | `list(string)` | <pre>[<br/>  "cloudkms.googleapis.com",<br/>  "compute.googleapis.com",<br/>  "logging.googleapis.com",<br/>  "monitoring.googleapis.com",<br/>  "pubsub.googleapis.com",<br/>  "secretmanager.googleapis.com",<br/>  "sourcerepo.googleapis.com",<br/>  "privateca.googleapis.com",<br/>  "iap.googleapis.com",<br/>  "websecurityscanner.googleapis.com",<br/>  "osconfig.googleapis.com",<br/>  "certificatemanager.googleapis.com"<br/>]</pre> | no |
 | <a name="input_aw_folder_id"></a> [aw\_folder\_id](#input\_aw\_folder\_id) | Assured Workloads folder ID. | `string` | n/a | yes |
 | <a name="input_billing_account"></a> [billing\_account](#input\_billing\_account) | The ID of the billing account to associate projects with. | `string` | n/a | yes |
-| <a name="input_boolean_type_organization_policies"></a> [boolean\_type\_organization\_policies](#input\_boolean\_type\_organization\_policies) | List of boolean type org policies to apply. | `list(string)` | <pre>[<br>  "compute.disableNonFIPSMachineTypes",<br>  "compute.skipDefaultNetworkCreation",<br>  "sql.restrictPublicIp",<br>  "storage.publicAccessPrevention"<br>]</pre> | no |
+| <a name="input_boolean_type_organization_policies"></a> [boolean\_type\_organization\_policies](#input\_boolean\_type\_organization\_policies) | List of boolean type org policies to apply. | `list(string)` | <pre>[<br/>  "compute.disableNonFIPSMachineTypes",<br/>  "compute.skipDefaultNetworkCreation",<br/>  "sql.restrictPublicIp",<br/>  "storage.publicAccessPrevention"<br/>]</pre> | no |
 | <a name="input_bucket_prefix"></a> [bucket\_prefix](#input\_bucket\_prefix) | Prefix for buckets. | `string` | `"bkt"` | no |
 | <a name="input_create_log_export"></a> [create\_log\_export](#input\_create\_log\_export) | Whether or not to create log export | `bool` | `true` | no |
 | <a name="input_folder_prefix"></a> [folder\_prefix](#input\_folder\_prefix) | Prefix for folders. | `string` | `"fldr"` | no |
 | <a name="input_group_org_admins"></a> [group\_org\_admins](#input\_group\_org\_admins) | Google Group for GCP Organization Administrators. | `string` | n/a | yes |
 | <a name="input_keyring_prefix"></a> [keyring\_prefix](#input\_keyring\_prefix) | Prefix for key rings. | `string` | `"kr"` | no |
 | <a name="input_log_filter"></a> [log\_filter](#input\_log\_filter) | Log export filter. | `string` | `"    logName: /logs/cloudaudit.googleapis.com%2Factivity OR\n    logName: /logs/cloudaudit.googleapis.com%2Fsystem_event OR\n    logName: /logs/cloudaudit.googleapis.com%2Fdata_access OR\n    logName: /logs/compute.googleapis.com%2Fvpc_flows OR\n    logName: /logs/compute.googleapis.com%2Ffirewall OR\n    logName: /logs/cloudaudit.googleapis.com%2Faccess_transparency\n"` | no |
-| <a name="input_management_services"></a> [management\_services](#input\_management\_services) | APIs & Services to enable for management project. | `list(string)` | n/a | yes |
-| <a name="input_networking_services"></a> [networking\_services](#input\_networking\_services) | APIs & Services to enable for networking project. | `list(string)` | n/a | yes |
-| <a name="input_org_admin_roles"></a> [org\_admin\_roles](#input\_org\_admin\_roles) | List of roles to assign to org admins. | `list(string)` | <pre>[<br>  "roles/assuredworkloads.admin",<br>  "roles/billing.user",<br>  "roles/cloudkms.admin",<br>  "roles/cloudsql.admin",<br>  "roles/compute.admin",<br>  "roles/compute.instanceAdmin",<br>  "roles/compute.networkAdmin",<br>  "roles/compute.securityAdmin",<br>  "roles/compute.xpnAdmin",<br>  "roles/dns.admin",<br>  "roles/iam.securityAdmin",<br>  "roles/iam.serviceAccountAdmin",<br>  "roles/iam.serviceAccountUser",<br>  "roles/logging.admin",<br>  "roles/orgpolicy.policyAdmin",<br>  "roles/pubsub.admin",<br>  "roles/resourcemanager.folderAdmin",<br>  "roles/resourcemanager.organizationAdmin",<br>  "roles/secretmanager.admin",<br>  "roles/source.admin",<br>  "roles/storage.admin"<br>]</pre> | no |
+| <a name="input_management_services"></a> [management\_services](#input\_management\_services) | APIs & Services to enable for management project. | `list(string)` | <pre>[<br/>  "cloudkms.googleapis.com",<br/>  "compute.googleapis.com",<br/>  "logging.googleapis.com",<br/>  "monitoring.googleapis.com",<br/>  "pubsub.googleapis.com",<br/>  "secretmanager.googleapis.com",<br/>  "sourcerepo.googleapis.com",<br/>  "privateca.googleapis.com",<br/>  "iap.googleapis.com",<br/>  "websecurityscanner.googleapis.com",<br/>  "osconfig.googleapis.com",<br/>  "certificatemanager.googleapis.com"<br/>]</pre> | no |
+| <a name="input_networking_folder"></a> [networking\_folder](#input\_networking\_folder) | Boolean value to determine if folder should be created. | `bool` | `true` | no |
+| <a name="input_networking_services"></a> [networking\_services](#input\_networking\_services) | APIs & Services to enable for networking project. | `list(string)` | <pre>[<br/>  "compute.googleapis.com",<br/>  "dns.googleapis.com",<br/>  "logging.googleapis.com",<br/>  "servicenetworking.googleapis.com",<br/>  "secretmanager.googleapis.com",<br/>  "pubsub.googleapis.com",<br/>  "cloudkms.googleapis.com",<br/>  "certificatemanager.googleapis.com"<br/>]</pre> | no |
+| <a name="input_org_admin_roles"></a> [org\_admin\_roles](#input\_org\_admin\_roles) | List of roles to assign to org admins. | `list(string)` | <pre>[<br/>  "roles/assuredworkloads.admin",<br/>  "roles/billing.user",<br/>  "roles/cloudkms.admin",<br/>  "roles/cloudsql.admin",<br/>  "roles/compute.admin",<br/>  "roles/compute.instanceAdmin",<br/>  "roles/compute.networkAdmin",<br/>  "roles/compute.securityAdmin",<br/>  "roles/compute.xpnAdmin",<br/>  "roles/dns.admin",<br/>  "roles/iam.securityAdmin",<br/>  "roles/iam.serviceAccountAdmin",<br/>  "roles/iam.serviceAccountUser",<br/>  "roles/logging.admin",<br/>  "roles/orgpolicy.policyAdmin",<br/>  "roles/pubsub.admin",<br/>  "roles/resourcemanager.folderAdmin",<br/>  "roles/resourcemanager.organizationAdmin",<br/>  "roles/secretmanager.admin",<br/>  "roles/source.admin",<br/>  "roles/storage.admin"<br/>]</pre> | no |
 | <a name="input_org_id"></a> [org\_id](#input\_org\_id) | GCP Organization ID | `string` | n/a | yes |
 | <a name="input_project_prefix"></a> [project\_prefix](#input\_project\_prefix) | Prefix for projects. | `string` | `"prj"` | no |
 | <a name="input_region"></a> [region](#input\_region) | The GCP region to create resources in. | `string` | n/a | yes |
 | <a name="input_sink_prefix"></a> [sink\_prefix](#input\_sink\_prefix) | Prefix for sinks. | `string` | `"sk"` | no |
 | <a name="input_ssh_user"></a> [ssh\_user](#input\_ssh\_user) | Default user for SSH access | `string` | `"gce-user"` | no |
 | <a name="input_topic_prefix"></a> [topic\_prefix](#input\_topic\_prefix) | Prefix for topics. | `string` | `"ps"` | no |
+| <a name="input_winbastion_administrator_secret"></a> [winbastion\_administrator\_secret](#input\_winbastion\_administrator\_secret) | Boolean value to determine if WinBastion Administrator secret should be created. | `bool` | `false` | no |
 | <a name="input_workspace_id"></a> [workspace\_id](#input\_workspace\_id) | Workspace / Cloud Identity ID - get via `gcloud organizations list` from DIRECTORY\_CUSTOMER\_ID | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| <a name="output_application_folder"></a> [application\_folder](#output\_application\_folder) | n/a |
+| <a name="output_application_project"></a> [application\_project](#output\_application\_project) | n/a |
 | <a name="output_cs_buckets"></a> [cs\_buckets](#output\_cs\_buckets) | n/a |
 | <a name="output_gce_ssh_private_key"></a> [gce\_ssh\_private\_key](#output\_gce\_ssh\_private\_key) | n/a |
 | <a name="output_group_org_admins"></a> [group\_org\_admins](#output\_group\_org\_admins) | n/a |

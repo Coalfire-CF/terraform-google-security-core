@@ -30,6 +30,8 @@ resource "google_secret_manager_secret_version" "gce_ssh_private_key" {
 module "winbastion_administrator" {
   source = "github.com/Coalfire-CF/terraform-google-secret-manager?ref=v1.0.6"
 
+  count = var.winbastion_administrator_secret ? 1 : 0
+
   project_id = module.management_project.project_id
   region     = var.region
 

@@ -21,17 +21,6 @@ module "gcs" {
     installs = module.kms.keys["cloud-storage"]
   }
 
-  bucket_lifecycle_rules = {
-    "tfstate" = [{
-      action = {
-        type = "Delete"
-      }
-      condition = {
-        age = "365"
-      }
-    }]
-  }
-
   versioning = {
     tfstate  = true
     backups  = true
