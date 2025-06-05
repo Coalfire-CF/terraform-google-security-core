@@ -16,6 +16,11 @@ The purpose of this module is to help bootstrap a GCP organization, creating all
 
 Coalfire has tested this module with Terraform version 1.5.0 and the Hashicorp Google provider versions 4.70 - 5.0.
 
+## Dependencies
+
+- Google Cloud organization
+- Assured Workloads folder
+
 ### Usage
 
 ```
@@ -25,12 +30,13 @@ module "bootstrap" {
   org_id           = var.org_id
   aw_folder_id     = var.aw_folder_id
   billing_account  = var.billing_account
+  workspace_id     = var.workspace_id
   group_org_admins = var.group_org_admins
 
   management_services = var.management_services
   networking_services = var.networking_services
 
-  region = var.region
+  region = var.gcp_region
 }
 ```
 
