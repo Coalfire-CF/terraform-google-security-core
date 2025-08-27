@@ -64,6 +64,7 @@ No requirements.
 | <a name="module_networking_folder"></a> [networking\_folder](#module\_networking\_folder) | github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
 | <a name="module_networking_project"></a> [networking\_project](#module\_networking\_project) | github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
 | <a name="module_organization_policies_domain_restricted_sharing"></a> [organization\_policies\_domain\_restricted\_sharing](#module\_organization\_policies\_domain\_restricted\_sharing) | github.com/Coalfire-CF/terraform-google-org-policy | v1.0.3 |
+| <a name="module_organization_policies_tls_restriction"></a> [organization\_policies\_tls\_restriction](#module\_organization\_policies\_tls\_restriction) | github.com/Coalfire-CF/terraform-google-org-policy | v1.0.3 |
 | <a name="module_organization_policies_type_boolean"></a> [organization\_policies\_type\_boolean](#module\_organization\_policies\_type\_boolean) | github.com/Coalfire-CF/terraform-google-org-policy | v1.0.3 |
 | <a name="module_winbastion_administrator"></a> [winbastion\_administrator](#module\_winbastion\_administrator) | github.com/Coalfire-CF/terraform-google-secret-manager | v1.0.6 |
 
