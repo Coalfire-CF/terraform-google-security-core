@@ -3,7 +3,7 @@
 *************************************************/
 
 module "organization_policies_type_boolean" {
-  source = "github.com/Coalfire-CF/terraform-google-org-policy?ref=v1.0.3"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-org-policy?ref=v1.0.3"
 
   for_each = toset(var.boolean_type_organization_policies)
 
@@ -15,7 +15,7 @@ module "organization_policies_type_boolean" {
 }
 
 module "organization_policies_domain_restricted_sharing" {
-  source = "github.com/Coalfire-CF/terraform-google-org-policy?ref=v1.0.3"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-org-policy?ref=v1.0.3"
 
   organization_id = var.org_id
   policy_for      = "organization"
@@ -30,7 +30,7 @@ module "organization_policies_domain_restricted_sharing" {
 }
 
 module "organization_policies_tls_restriction" {
-  source = "github.com/Coalfire-CF/terraform-google-org-policy?ref=v1.0.3"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-org-policy?ref=v1.0.3"
 
   organization_id = var.org_id
   policy_for      = "organization"
