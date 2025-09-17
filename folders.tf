@@ -7,14 +7,14 @@ data "google_folder" "aw_folder" {
 *************************************************/
 
 module "management_folder" {
-  source = "github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.3"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.3"
 
   name   = "${var.folder_prefix}-management"
   parent = data.google_folder.aw_folder.name
 }
 
 module "networking_folder" {
-  source = "github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.3"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.3"
 
   count = var.networking_folder ? 1 : 0
 
@@ -23,7 +23,7 @@ module "networking_folder" {
 }
 
 module "application_folder" {
-  source = "github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.3"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.3"
 
   count = var.application_folder ? 1 : 0
 

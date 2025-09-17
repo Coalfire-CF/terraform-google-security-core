@@ -53,20 +53,20 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_application_folder"></a> [application\_folder](#module\_application\_folder) | github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
-| <a name="module_application_project"></a> [application\_project](#module\_application\_project) | github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
-| <a name="module_destination"></a> [destination](#module\_destination) | github.com/Coalfire-CF/terraform-google-log-export//modules/storage | v1.0.4 |
-| <a name="module_gcs"></a> [gcs](#module\_gcs) | github.com/Coalfire-CF/terraform-google-cloud-storage | v1.0.4 |
-| <a name="module_kms"></a> [kms](#module\_kms) | github.com/Coalfire-CF/terraform-google-kms | v1.0.4 |
-| <a name="module_log_export"></a> [log\_export](#module\_log\_export) | github.com/Coalfire-CF/terraform-google-log-export | v1.0.4 |
-| <a name="module_management_folder"></a> [management\_folder](#module\_management\_folder) | github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
-| <a name="module_management_project"></a> [management\_project](#module\_management\_project) | github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
-| <a name="module_networking_folder"></a> [networking\_folder](#module\_networking\_folder) | github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
-| <a name="module_networking_project"></a> [networking\_project](#module\_networking\_project) | github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
-| <a name="module_organization_policies_domain_restricted_sharing"></a> [organization\_policies\_domain\_restricted\_sharing](#module\_organization\_policies\_domain\_restricted\_sharing) | github.com/Coalfire-CF/terraform-google-org-policy | v1.0.3 |
-| <a name="module_organization_policies_tls_restriction"></a> [organization\_policies\_tls\_restriction](#module\_organization\_policies\_tls\_restriction) | github.com/Coalfire-CF/terraform-google-org-policy | v1.0.3 |
-| <a name="module_organization_policies_type_boolean"></a> [organization\_policies\_type\_boolean](#module\_organization\_policies\_type\_boolean) | github.com/Coalfire-CF/terraform-google-org-policy | v1.0.3 |
-| <a name="module_winbastion_administrator"></a> [winbastion\_administrator](#module\_winbastion\_administrator) | github.com/Coalfire-CF/terraform-google-secret-manager | v1.0.6 |
+| <a name="module_application_folder"></a> [application\_folder](#module\_application\_folder) | git::https://github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
+| <a name="module_application_project"></a> [application\_project](#module\_application\_project) | git::https://github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
+| <a name="module_destination"></a> [destination](#module\_destination) | git::https://github.com/Coalfire-CF/terraform-google-log-export//modules/storage | v1.0.4 |
+| <a name="module_gcs"></a> [gcs](#module\_gcs) | git::https://github.com/Coalfire-CF/terraform-google-cloud-storage | v1.0.4 |
+| <a name="module_kms"></a> [kms](#module\_kms) | git::https://github.com/Coalfire-CF/terraform-google-kms | v1.0.4 |
+| <a name="module_log_export"></a> [log\_export](#module\_log\_export) | git::https://github.com/Coalfire-CF/terraform-google-log-export | v1.0.4 |
+| <a name="module_management_folder"></a> [management\_folder](#module\_management\_folder) | git::https://github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
+| <a name="module_management_project"></a> [management\_project](#module\_management\_project) | git::https://github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
+| <a name="module_networking_folder"></a> [networking\_folder](#module\_networking\_folder) | git::https://github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
+| <a name="module_networking_project"></a> [networking\_project](#module\_networking\_project) | git::https://github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
+| <a name="module_organization_policies_domain_restricted_sharing"></a> [organization\_policies\_domain\_restricted\_sharing](#module\_organization\_policies\_domain\_restricted\_sharing) | git::https://github.com/Coalfire-CF/terraform-google-org-policy | v1.0.3 |
+| <a name="module_organization_policies_tls_restriction"></a> [organization\_policies\_tls\_restriction](#module\_organization\_policies\_tls\_restriction) | git::https://github.com/Coalfire-CF/terraform-google-org-policy | v1.0.3 |
+| <a name="module_organization_policies_type_boolean"></a> [organization\_policies\_type\_boolean](#module\_organization\_policies\_type\_boolean) | git::https://github.com/Coalfire-CF/terraform-google-org-policy | v1.0.3 |
+| <a name="module_winbastion_administrator"></a> [winbastion\_administrator](#module\_winbastion\_administrator) | git::https://github.com/Coalfire-CF/terraform-google-secret-manager | v1.0.6 |
 
 ## Resources
 
