@@ -23,7 +23,7 @@ module "networking_folder" {
 }
 
 module "application_folder" {
-  source = "git::https://github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.3"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.5"
 
   count = var.application_folder ? 1 : 0
 
