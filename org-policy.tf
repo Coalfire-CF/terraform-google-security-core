@@ -15,7 +15,7 @@ module "organization_policies_type_boolean" {
 }
 
 module "organization_policies_domain_restricted_sharing" {
-  source = "git::https://github.com/Coalfire-CF/terraform-google-org-policy?ref=v1.0.3"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-org-policy?ref=v1.0.5"
 
   organization_id = var.org_id
   policy_for      = "organization"
