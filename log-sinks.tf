@@ -9,7 +9,7 @@ resource "random_string" "suffix_sink" {
 }
 
 module "log_export" {
-  source = "git::https://github.com/Coalfire-CF/terraform-google-log-export?ref=v1.0.4"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-log-export?ref=v1.0.6"
 
   count = var.create_log_export ? 1 : 0
 
