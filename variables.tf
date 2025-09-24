@@ -196,3 +196,13 @@ variable "winbastion_administrator_secret" {
   type        = bool
   default     = false
 }
+
+variable "environment" {
+  description = "Environment type - 'sandbox' for internal testing, 'prod' for production deployments"
+  type        = string
+  validation {
+    condition     = contains(["sandbox", "prod"], var.environment)
+    error_message = "Environment type must be either 'sandbox' or 'prod'."
+  }
+  default = "sandbox"
+}

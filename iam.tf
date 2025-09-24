@@ -1,5 +1,5 @@
 resource "google_organization_iam_member" "org_admins" {
-  for_each = toset(var.org_admin_roles)
+  for_each = var.environment == "prod" ? toset(var.org_admin_roles) : []
 
   org_id = var.org_id
   role   = each.value
