@@ -22,6 +22,9 @@ Coalfire has tested this module with Terraform version 1.5.0 and the Hashicorp G
 module "bootstrap" {
   source = "github.com/Coalfire-CF/terraform-google-security-core"
 
+  # Must be set to prod to ensure org IAM permissions function properly; distinguishes from GCP sandbox env
+  environment      = "prod" 
+
   org_id           = var.org_id
   aw_folder_id     = var.aw_folder_id
   billing_account  = var.billing_account
