@@ -22,6 +22,9 @@ Coalfire has tested this module with Terraform version 1.5.0 and the Hashicorp G
 module "bootstrap" {
   source = "github.com/Coalfire-CF/terraform-google-security-core"
 
+  # Must be set to prod to ensure org IAM permissions function properly; distinguishes from GCP sandbox env
+  environment      = "prod" 
+
   org_id           = var.org_id
   aw_folder_id     = var.aw_folder_id
   billing_account  = var.billing_account
@@ -106,6 +109,7 @@ No requirements.
 | <a name="input_boolean_type_organization_policies"></a> [boolean\_type\_organization\_policies](#input\_boolean\_type\_organization\_policies) | List of boolean type org policies to apply. | `list(string)` | <pre>[<br/>  "compute.disableNonFIPSMachineTypes",<br/>  "compute.skipDefaultNetworkCreation",<br/>  "sql.restrictPublicIp",<br/>  "storage.publicAccessPrevention"<br/>]</pre> | no |
 | <a name="input_bucket_prefix"></a> [bucket\_prefix](#input\_bucket\_prefix) | Prefix for buckets. | `string` | `"bkt"` | no |
 | <a name="input_create_log_export"></a> [create\_log\_export](#input\_create\_log\_export) | Whether or not to create log export | `bool` | `true` | no |
+| <a name="input_environment"></a> [environment](#input\_environment) | Environment type - 'sandbox' for internal testing, 'prod' for production deployments | `string` | `"sandbox"` | no |
 | <a name="input_folder_prefix"></a> [folder\_prefix](#input\_folder\_prefix) | Prefix for folders. | `string` | `"fldr"` | no |
 | <a name="input_group_org_admins"></a> [group\_org\_admins](#input\_group\_org\_admins) | Google Group for GCP Organization Administrators. | `string` | n/a | yes |
 | <a name="input_keyring_prefix"></a> [keyring\_prefix](#input\_keyring\_prefix) | Prefix for key rings. | `string` | `"kr"` | no |
