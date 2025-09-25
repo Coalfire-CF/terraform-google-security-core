@@ -28,7 +28,7 @@ module "log_export" {
 }
 
 module "destination" {
-  source = "git::https://github.com/Coalfire-CF/terraform-google-log-export//modules/storage?ref=v1.0.4"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-log-export//modules/storage?ref=v1.0.6"
 
   count = var.create_log_export ? 1 : 0
 
