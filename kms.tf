@@ -1,5 +1,5 @@
 locals {
-  cmeks = [
+  default_cmeks = [
     "cloud-logging",
     "cloud-sql",
     "cloud-storage",
@@ -7,6 +7,8 @@ locals {
     "pub-sub",
     "secret-manager"
   ]
+
+  all_cmeks = concat(local.default_cmeks, var.additional_cmek_keys)
 }
 
 /*************************************************
@@ -19,7 +21,7 @@ module "kms" {
   project_id = module.management_project.project_id
   location   = var.region
   keyring    = "${var.keyring_prefix}-cmeks"
-  keys       = local.cmeks
+  keys       = local.all_cmeks
 
   key_rotation_period = "31536000s"
 
