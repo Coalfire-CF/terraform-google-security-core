@@ -206,3 +206,9 @@ variable "environment" {
   }
   default = "sandbox"
 }
+
+variable "additional_cmek_keys" {
+  description = "Additional customer-managed encryption keys to create beyond the default set"
+  type        = list(string)
+  default     = []
+}

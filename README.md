@@ -102,6 +102,7 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_additional_cmek_keys"></a> [additional\_cmek\_keys](#input\_additional\_cmek\_keys) | Additional customer-managed encryption keys to create beyond the default set | `list(string)` | `[]` | no |
 | <a name="input_application_folder"></a> [application\_folder](#input\_application\_folder) | Boolean value to determine if folder should be created. | `bool` | `true` | no |
 | <a name="input_application_services"></a> [application\_services](#input\_application\_services) | APIs & Services to enable for application project. | `list(string)` | <pre>[<br/>  "cloudkms.googleapis.com",<br/>  "compute.googleapis.com",<br/>  "logging.googleapis.com",<br/>  "monitoring.googleapis.com",<br/>  "pubsub.googleapis.com",<br/>  "secretmanager.googleapis.com",<br/>  "privateca.googleapis.com",<br/>  "iap.googleapis.com",<br/>  "websecurityscanner.googleapis.com",<br/>  "osconfig.googleapis.com",<br/>  "certificatemanager.googleapis.com"<br/>]</pre> | no |
 | <a name="input_aw_folder_id"></a> [aw\_folder\_id](#input\_aw\_folder\_id) | Assured Workloads folder ID. | `string` | n/a | yes |
