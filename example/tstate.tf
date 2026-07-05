@@ -6,7 +6,7 @@ terraform {
     }
     google-beta = {
       source  = "hashicorp/google-beta"
-      version = ">= 4.70, < 5.0"
+      version = ">= 4.70, < 7.40"
     }
   }
   # Comment this out on initial deployment. Once tf apply is successful, 
