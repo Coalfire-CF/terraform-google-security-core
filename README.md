@@ -156,6 +156,7 @@ No requirements.
 ## Tree
 ```text
 .
+|-- CHANGELOG.md
 |-- CONTRIBUTING.md
 |-- LICENSE
 |-- README.md
