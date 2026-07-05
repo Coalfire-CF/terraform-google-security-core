@@ -152,3 +152,24 @@ No requirements.
 | <a name="output_networking_folder"></a> [networking\_folder](#output\_networking\_folder) | n/a |
 | <a name="output_networking_project"></a> [networking\_project](#output\_networking\_project) | n/a |
 <!-- END_TF_DOCS -->
+
+## Tree
+```text
+.
+|-- CONTRIBUTING.md
+|-- LICENSE
+|-- README.md
+|-- coalfire_logo.png
+|-- folders.tf
+|-- gce.tf
+|-- gcs.tf
+|-- gsm.tf
+|-- iam.tf
+|-- kms.tf
+|-- log-sinks.tf
+|-- org-policy.tf
+|-- outputs.tf
+|-- projects.tf
+|-- release-please-config.json
+|-- variables.tf
+```
