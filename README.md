@@ -64,7 +64,7 @@ No requirements.
 |------|--------|---------|
 | <a name="module_application_folder"></a> [application\_folder](#module\_application\_folder) | git::https://github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
 | <a name="module_application_project"></a> [application\_project](#module\_application\_project) | git::https://github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
-| <a name="module_destination"></a> [destination](#module\_destination) | git::https://github.com/Coalfire-CF/terraform-google-log-export//modules/storage | v1.0.4 |
+| <a name="module_destination"></a> [destination](#module\_destination) | git::https://github.com/Coalfire-CF/terraform-google-log-export//modules/storage | v1.0.8 |
 | <a name="module_gcs"></a> [gcs](#module\_gcs) | git::https://github.com/Coalfire-CF/terraform-google-cloud-storage | v1.0.4 |
 | <a name="module_kms"></a> [kms](#module\_kms) | git::https://github.com/Coalfire-CF/terraform-google-kms | v1.0.4 |
 | <a name="module_log_export"></a> [log\_export](#module\_log\_export) | git::https://github.com/Coalfire-CF/terraform-google-log-export | v1.0.4 |
