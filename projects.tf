@@ -5,7 +5,7 @@
 # Management
 
 module "management_project" {
-  source = "git::https://github.com/Coalfire-CF/terraform-google-project?ref=v1.0.4"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-project?ref=v1.1.0"
 
   name            = "${var.project_prefix}-management"
   project_id      = "${var.project_prefix}-management"
