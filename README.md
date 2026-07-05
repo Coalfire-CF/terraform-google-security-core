@@ -161,6 +161,12 @@ No requirements.
 |-- LICENSE
 |-- README.md
 |-- coalfire_logo.png
+|-- example
+|   |-- outputs.tf
+|   |-- provider.tf
+|   |-- setup.tf
+|   |-- tstate.tf
+|   |-- variables.tf
 |-- folders.tf
 |-- gce.tf
 |-- gcs.tf
