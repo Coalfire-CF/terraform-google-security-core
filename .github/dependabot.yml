@@ -31,3 +31,12 @@ updates:
       include: "scope"
     labels:
       - "dep/terraform-module"
+  - package-ecosystem: "terraform"
+    directory: "/example"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dep/terraform-module"

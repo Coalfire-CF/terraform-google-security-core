@@ -1,5 +1,5 @@
 module "bootstrap" {
-    source = "github.com/Coalfire-CF/terraform-google-security-core?ref=v1.0.17"
+    source = "git::https://github.com/Coalfire-CF/terraform-google-security-core?ref=v1.0.17"
 
     org_id = var.org_id
     aw_folder_id = var.aw_folder_id
