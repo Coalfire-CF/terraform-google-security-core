@@ -69,7 +69,7 @@ No requirements.
 | <a name="module_kms"></a> [kms](#module\_kms) | git::https://github.com/Coalfire-CF/terraform-google-kms | v1.0.4 |
 | <a name="module_log_export"></a> [log\_export](#module\_log\_export) | git::https://github.com/Coalfire-CF/terraform-google-log-export | v1.0.4 |
 | <a name="module_management_folder"></a> [management\_folder](#module\_management\_folder) | git::https://github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
-| <a name="module_management_project"></a> [management\_project](#module\_management\_project) | git::https://github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
+| <a name="module_management_project"></a> [management\_project](#module\_management\_project) | git::https://github.com/Coalfire-CF/terraform-google-project | v1.1.0 |
 | <a name="module_networking_folder"></a> [networking\_folder](#module\_networking\_folder) | git::https://github.com/Coalfire-CF/terraform-google-folder | v1.0.3 |
 | <a name="module_networking_project"></a> [networking\_project](#module\_networking\_project) | git::https://github.com/Coalfire-CF/terraform-google-project | v1.0.4 |
 | <a name="module_organization_policies_domain_restricted_sharing"></a> [organization\_policies\_domain\_restricted\_sharing](#module\_organization\_policies\_domain\_restricted\_sharing) | git::https://github.com/Coalfire-CF/terraform-google-org-policy | v1.0.3 |
