@@ -30,7 +30,7 @@ module "organization_policies_domain_restricted_sharing" {
 }
 
 module "organization_policies_tls_restriction" {
-  source = "git::https://github.com/Coalfire-CF/terraform-google-org-policy?ref=v1.0.3"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-org-policy?ref=v1.1.0"
 
   organization_id = var.org_id
   policy_for      = "organization"
