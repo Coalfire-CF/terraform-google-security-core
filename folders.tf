@@ -7,7 +7,7 @@ data "google_folder" "aw_folder" {
 *************************************************/
 
 module "management_folder" {
-  source = "git::https://github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.3"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-folder?ref=v1.0.6"
 
   name   = "${var.folder_prefix}-management"
   parent = data.google_folder.aw_folder.name
