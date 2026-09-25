@@ -3,7 +3,7 @@
 *************************************************/
 
 module "gcs" {
-  source = "git::https://github.com/Coalfire-CF/terraform-google-cloud-storage?ref=v1.0.4"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-cloud-storage?ref=v1.1.0"
 
   project_id = module.management_project.project_id
   names = [
