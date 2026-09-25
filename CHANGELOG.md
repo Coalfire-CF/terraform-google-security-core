@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.1.1](https://github.com/Coalfire-CF/terraform-google-security-core/compare/v1.1.0...v1.1.1) (2026-09-25)
+
+
+### Bug Fixes
+
+* **release:** pass secrets to org-release (App token for release-please) ([#61](https://github.com/Coalfire-CF/terraform-google-security-core/issues/61)) ([6b05404](https://github.com/Coalfire-CF/terraform-google-security-core/commit/6b05404f7b6d91dab3e2b6ef4126a38dcc646eb2))
+
+
+### Miscellaneous
+
+* adopt Actions v0.12.1 (bypass auto-merge + event-driven re-merge) ([e731e7a](https://github.com/Coalfire-CF/terraform-google-security-core/commit/e731e7a2ab14b806e38dc16936f9a485a16d20c2))
+* **ci:** adopt Coalfire-CF/Actions v0.11.3 ([#59](https://github.com/Coalfire-CF/terraform-google-security-core/issues/59)) ([0d4b0dc](https://github.com/Coalfire-CF/terraform-google-security-core/commit/0d4b0dc9fa3a941178d626851af8b57d73b2f005))
+* **deps:** bump the org-actions group across 1 directory with 9 updates ([#72](https://github.com/Coalfire-CF/terraform-google-security-core/issues/72)) ([ac9c68b](https://github.com/Coalfire-CF/terraform-google-security-core/commit/ac9c68b36e846270114582b8c90a4009b17fe261))
+* **deps:** bump the org-actions group with 10 updates ([#62](https://github.com/Coalfire-CF/terraform-google-security-core/issues/62)) ([ea09ed7](https://github.com/Coalfire-CF/terraform-google-security-core/commit/ea09ed71768ef37cc80721dd7760aee1cf996a88))
+* **deps:** bump the org-actions group with 10 updates ([#63](https://github.com/Coalfire-CF/terraform-google-security-core/issues/63)) ([9247a7e](https://github.com/Coalfire-CF/terraform-google-security-core/commit/9247a7e56c2e7ca0da95ddb991d0ba54f8420557))
+* **deps:** bump the org-actions group with 10 updates ([#64](https://github.com/Coalfire-CF/terraform-google-security-core/issues/64)) ([90bf416](https://github.com/Coalfire-CF/terraform-google-security-core/commit/90bf41685f9b7fb39171ce8b840c1852fa6c2ebf))
+* **deps:** bump the org-actions group with 10 updates ([#65](https://github.com/Coalfire-CF/terraform-google-security-core/issues/65)) ([c2abcbf](https://github.com/Coalfire-CF/terraform-google-security-core/commit/c2abcbf76776c0e25d550af672cb0a32d653e098))
+* **deps:** bump the org-actions group with 9 updates ([#68](https://github.com/Coalfire-CF/terraform-google-security-core/issues/68)) ([3e3d3ec](https://github.com/Coalfire-CF/terraform-google-security-core/commit/3e3d3ecdab49af24d71d4155227cd23301750fe3))
+* **docs:** generate README from _header.md and _footer.md ([#70](https://github.com/Coalfire-CF/terraform-google-security-core/issues/70)) ([bb9eb94](https://github.com/Coalfire-CF/terraform-google-security-core/commit/bb9eb943482b5ff40feae9535240ae0d23212794))
+* retire org-tree-readme ([#66](https://github.com/Coalfire-CF/terraform-google-security-core/issues/66)) ([9f91a71](https://github.com/Coalfire-CF/terraform-google-security-core/commit/9f91a71abe708f78bbfd8a1769cc9a610acbe073))
+
 ## [1.1.0](https://github.com/Coalfire-CF/terraform-google-security-core/compare/v1.0.18...v1.1.0) (2026-07-05)
 
 
