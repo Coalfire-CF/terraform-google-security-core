@@ -31,7 +31,7 @@ module "networking_project" {
 # Application
 
 module "application_project" {
-  source = "git::https://github.com/Coalfire-CF/terraform-google-project?ref=v1.0.4"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-project?ref=v1.1.0"
 
   count = var.application_folder ? 1 : 0
 
