@@ -16,7 +16,7 @@ locals {
 *************************************************/
 
 module "kms" {
-  source = "git::https://github.com/Coalfire-CF/terraform-google-kms?ref=v1.0.4"
+  source = "git::https://github.com/Coalfire-CF/terraform-google-kms?ref=v1.1.0"
 
   project_id = module.management_project.project_id
   location   = var.region
